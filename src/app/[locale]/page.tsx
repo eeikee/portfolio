@@ -1,10 +1,11 @@
-import { BlogPosts } from 'app/components/posts'
+import { useTranslations } from 'next-intl';
 
 export default function Page() {
+  const t = useTranslations('Page');
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        {t('title')}
       </h1>
       <p className="mb-4">
         {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
@@ -14,7 +15,6 @@ export default function Page() {
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
       <div className="my-8">
-        <BlogPosts />
       </div>
     </section>
   )
