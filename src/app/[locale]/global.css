@@ -34,6 +34,10 @@ html {
   min-width: 360px;
 }
 
+body, html {
+  @apply flex items-center justify-center min-h-screen;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 

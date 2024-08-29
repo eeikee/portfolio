@@ -1,3 +1,8 @@
+'use client'
+
+import { Card, Divider, List } from "antd";
+import { useTranslations } from "next-intl";
+
 function ArrowIcon() {
   return (
     <svg
@@ -15,9 +20,44 @@ function ArrowIcon() {
   )
 }
 
+
+const data = [
+  {
+    title: 'Email',
+    content: "ekonuma12@gmail.com"
+  },
+  {
+    title: 'Phone',
+    content: "+81 (070) 9186-0325"
+  },
+  {
+    title: 'Linkedin',
+    content: "https://www.linkedin.com/in/ekonuma/"
+  }
+];
+
 export default function Footer() {
+  const t = useTranslations('Footer');
   return (
     <footer className="mb-16">
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Contacts</h1>
+      <List
+        grid={{
+          gutter: 16, xs: 1,
+          sm: 2,
+          md: 4,
+          lg: 4,
+          xl: 6,
+          xxl: 3,
+        }}
+        dataSource={data}
+        renderItem={(item) => (
+          <List.Item >
+            <Card title={item.title}>{item.content}</Card>
+          </List.Item>
+        )}
+      />
+      <Divider style={{ borderColor: '#FFFFFF' }} />
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a

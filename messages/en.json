@@ -1,5 +1,16 @@
 {
     "Page": {
       "title": "Hi, I'm Eike!"
+    },
+    "Works": {
+
+    },
+    "Footer": {
+      "a": [{
+        "id": 1,
+        "label": "2020/10 - GFT Intern training camp",
+        "children": "Intern at GFT, Java ecossistem training, TDD, QA, Angular",
+        "color": "white"
+      }]
     }
   }

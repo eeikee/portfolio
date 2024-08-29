@@ -74,6 +74,9 @@ importers:
       typescript:
         specifier: 5.3.3
         version: 5.3.3
+      ua-parser-js:
+        specifier: ^1.0.38
+        version: 1.0.38
     devDependencies:
       autoprefixer:
         specifier: ^10.4.19
@@ -1305,6 +1308,9 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  ua-parser-js@1.0.38:
+    resolution: {integrity: sha512-Aq5ppTOfvrCMgAPneW1HfWj66Xi7XL+/mIy996R1/CLS/rcyJQm6QZdsKrUeivDFQ+Oc9Wyuwor8Ze8peEoUoQ==}
 
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
@@ -2889,6 +2895,8 @@ snapshots:
   tslib@2.6.3: {}
 
   typescript@5.3.3: {}
+
+  ua-parser-js@1.0.38: {}
 
   undici-types@5.26.5: {}
 
