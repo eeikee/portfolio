@@ -7,19 +7,16 @@ import WorkHistory from 'src/components/work-history';
 import ProjectCardList from '../../components/projects-card-list';
 
 export default function Page() {
-  const t = useTranslations('Page');
+  const t = useTranslations('home');
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        {t('title')}
+        <p>{t('greeting')}</p>
+        <p>{t('welcome')}</p>
       </h1>
       <Divider style={{ borderColor: '#FFFFFF' }} />
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {t('introduction')}
       </p>
       <div className="my-8">
       </div>

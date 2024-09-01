@@ -1,14 +1,14 @@
-import Link from 'next/link'
-import LanguageSwitcher from './language-switcher'
+import Link from "next/link";
+import LanguageSwitcher from "./language-switcher";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
   },
   // '/blog': {
   //   name: 'blog',
   // }
-}
+};
 
 export function Navbar() {
   return (
@@ -24,19 +24,18 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
                 >
                   {name}
                 </Link>
-              )
+              );
             })}
+          </div>
+          <div style={{ display: "inline-block", marginLeft: "auto"}}>
+            <LanguageSwitcher />
           </div>
         </nav>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <LanguageSwitcher />
-      </div>
     </aside>
-  )
+  );
 }
