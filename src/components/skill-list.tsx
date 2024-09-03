@@ -13,7 +13,7 @@ export default function SkillList() {
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Skills</h1>
 
-      <Card title="Card Title">
+      <Card>
         <Card.Grid style={gridStyle}>Content</Card.Grid>
         <Card.Grid hoverable={false} style={gridStyle}>
           Content
