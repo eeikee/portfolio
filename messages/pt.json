@@ -1,7 +1,7 @@
 {
     "home": {
-      "greeting": "Olá, eu sou o Eike!",
-      "welcome": "Olá, eu sou o Eike!",
+      "greeting": "Prazer, eu sou o Eike.",
+      "welcome": "Bem vindo ao meu portfólio!",
       "introduction": "Hello! I'm a Java backend engineer with nearly 4 years of experience, born in Tokyo in 2001. As a half Japanese, half Brazilian tech enthusiast, I have a deep passion for technology and gadgets. I thrive on new challenges and have a particular interest in Android and Linux. Currently, I'm expanding my expertise by studying Golang, React, Next.js, Android native apps, and Kotlin. I'm excited to leverage my diverse background and skills to create innovative solutions and tackle new projects."
     }
   }
