@@ -55,16 +55,33 @@ const skills = [
     name: "Kubernetes",
     type: "infra",
   },
+  {
+    name: "Linux",
+    type: "infra",
+  },
+  {
+    name: "Shell",
+    type: "infra",
+  },
+  {
+    name: "Android",
+    type: "mobile",
+  },
+  {
+    name: "Kotlin",
+    type: "mobile",
+  },
 ];
 
 export default function SkillList() {
   const categories = new Map();
 
-  categories.set("backend", PresetColors[7]);
+  categories.set("backend", PresetColors[4]);
   categories.set("frontend", PresetColors[10]);
   categories.set("cloud", PresetColors[2]);
   categories.set("service", PresetColors[11]);
   categories.set("infra", PresetColors[1]);
+  categories.set("mobile", PresetColors[9]);
 
   const groupBy = (array, keyGetter) => {
     const map = new Map();
