@@ -7,22 +7,42 @@ export type Work = {
 export const works: Work[] = [
   {
     id: 1,
-    children: "Intern at GFT, Java ecossistem training, TDD, QA, Angular",
-    color: "white",
+    children: "2020/10: Internship at GFT Group (IT Consulting services)",
+    color: "blue",
   },
   {
     id: 2,
-    children: "First project ",
-    color: "green",
+    children: "Starter training - Java ecossistem training, MVC, Rest, TDD, BDD,  Angular",
+    color: "blue",
   },
   {
     id: 3,
-    children: "https://avatars.githubusercontent.com/u/80468144?s=200&v=4",
-    color: "orange",
+    children: "2021/1: Banco Original (GFT Group's Client) - legacy Java systems, on-premises databases, Java Schedulers, maintenance and enhancement of legacy code",
+    color: "green",
   },
   {
     id: 4,
-    children: "Exit",
+    children: "2021/4: Hired as fulltime Backend Engineer",
     color: "blue",
+  },
+  {
+    id: 5,
+    children: "2021/6: Rabobank (GFT Group's Client)",
+    color: "orange",
+  },
+  {
+    id: 6,
+    children: "Rabobank (Client)",
+    color: "orange",
+  },
+  {
+    id: 7,
+    children: "Rabobank (Client)",
+    color: "orange",
+  },
+  {
+    id: 8,
+    children: "2024/7: Move back from Brazil to Japan",
+    color: "red",
   },
 ];
