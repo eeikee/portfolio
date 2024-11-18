@@ -29,10 +29,10 @@ jobs:
         id: cache-dependencies
         uses: actions/cache@v3
         with:
-          # Usando caminho relativo para armazenar o cache
+          # Caminho correto para o cache do pnpm-store
           path: ~/.pnpm-store
-          # Verificando se o arquivo de lock 'pnpm-lock.yaml' realmente existe na raiz
-          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          # Usando o caminho relativo correto para o arquivo `pnpm-lock.yaml`
+          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}  # Usando o caminho relativo para o arquivo de lock
           restore-keys: |
             pnpm-store-
 
