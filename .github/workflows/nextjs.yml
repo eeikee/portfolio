@@ -1,5 +1,5 @@
 # File: .github/workflows/setup-node.yml
-name: Setup Node.js Workflow
+name: Setup Node.js with pnpm
 on:
   push:
     branches:
@@ -13,24 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Setup Node.js
+      # Step 1: Set up Node.js
       - name: Set up Node.js ⚙️
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: 'npm'  # Ativar cache automático para npm
+          cache: 'pnpm'  # Cache pnpm
 
       # Step 2: Cache dependencies ⚡
-      - name: Cache node_modules ⚡
+      - name: Cache pnpm store ⚡
         id: cache-dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          path: ~/.pnpm-store
+          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
-            node-modules-
+            pnpm-store-
 
-      # Step 3: Install dependencies 🔧
+      # Step 3: Install dependencies with pnpm 🔧
       - name: Install dependencies 🔧
-        run: npm ci
+        run: pnpm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
