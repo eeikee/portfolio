@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'  # Cache pnpm
-          cache-dependency-path: /home/runner/work/portfolio/pnpm-lock.yaml
+          cache-dependency-path: 'pnpm-lock.yaml'  # Corrigir o caminho do arquivo de lock para ser relativo
 
       # Step 3: Cache pnpm store ⚡
       - name: Cache pnpm store ⚡
@@ -31,6 +31,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
+          # Usando caminho relativo para buscar o pnpm-lock.yaml
           key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
             pnpm-store-
