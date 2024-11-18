@@ -1,0 +1,36 @@
+# File: .github/workflows/setup-node.yml
+name: Setup Node.js Workflow
+on:
+  push:
+    branches:
+      - main  # Ou a branch que você utiliza para deploy
+  pull_request:
+    branches:
+      - main  # Ou as branches que você usa para PRs
+
+jobs:
+  setup-node:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Setup Node.js
+      - name: Set up Node.js ⚙️
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'  # Ativar cache automático para npm
+
+      # Step 2: Cache dependencies ⚡
+      - name: Cache node_modules ⚡
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-
+
+      # Step 3: Install dependencies 🔧
+      - name: Install dependencies 🔧
+        run: npm ci
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
