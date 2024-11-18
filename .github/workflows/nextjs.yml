@@ -1,6 +1,6 @@
 defaults:
   run:
-    working-directory: portfolio
+    working-directory: ../../
 
 # File: .github/workflows/setup-node.yml
 name: Setup Node.js with pnpm
