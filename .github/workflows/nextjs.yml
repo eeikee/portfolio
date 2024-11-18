@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'  # Cache pnpm
-          cache-dependency-path: .
+          cache-dependency-path: portfolio/pnpm-lock.yaml
 
       # Step 3: Cache pnpm store ⚡
       - name: Cache pnpm store ⚡
