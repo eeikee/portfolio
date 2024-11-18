@@ -1,7 +1,3 @@
-defaults:
-  run:
-    working-directory: portfolio
-
 # File: .github/workflows/setup-node.yml
 name: Setup Node.js with pnpm
 on:
@@ -27,7 +23,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'  # Cache pnpm
-          cache-dependency-path: ./portfolio/pnpm-lock.yaml
+          cache-dependency-path: /home/runner/work/portfolio/pnpm-lock.yaml
 
       # Step 3: Cache pnpm store ⚡
       - name: Cache pnpm store ⚡
