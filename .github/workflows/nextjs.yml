@@ -31,8 +31,8 @@ jobs:
         with:
           # Caminho correto para o cache do pnpm-store
           path: ~/.pnpm-store
-          # Usando o caminho relativo correto para o arquivo `pnpm-lock.yaml`
-          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}  # Usando o caminho relativo para o arquivo de lock
+          # Usando o caminho relativo correto para o arquivo `pnpm-lock.yaml` com glob pattern
+          key: pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}  # Usando glob para encontrar o arquivo em qualquer subdiretório
           restore-keys: |
             pnpm-store-
 
