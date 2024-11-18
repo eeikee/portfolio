@@ -20,7 +20,11 @@ jobs:
           node-version: '20'
           cache: 'pnpm'  # Cache pnpm
 
-      # Step 2: Cache dependencies ⚡
+      # Step 2: Install pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Step 3: Cache pnpm store ⚡
       - name: Cache pnpm store ⚡
         id: cache-dependencies
         uses: actions/cache@v3
@@ -30,7 +34,7 @@ jobs:
           restore-keys: |
             pnpm-store-
 
-      # Step 3: Install dependencies with pnpm 🔧
+      # Step 4: Install dependencies with pnpm 🔧
       - name: Install dependencies 🔧
         run: pnpm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
