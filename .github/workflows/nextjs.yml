@@ -20,9 +20,11 @@ jobs:
           node-version: '20'
           cache: 'pnpm'  # Cache pnpm
 
-      # Step 2: Install pnpm via corepack
-      - name: Install pnpm using corepack
-        run: corepack enable && corepack prepare pnpm@latest --activate
+      # Step 2: Install pnpm manually using npm
+      - name: Install pnpm globally
+        run: |
+          npm install -g pnpm
+          pnpm --version  # Verifica se o pnpm foi instalado corretamente
 
       # Step 3: Cache pnpm store ⚡
       - name: Cache pnpm store ⚡
