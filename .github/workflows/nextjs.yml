@@ -1,42 +1,26 @@
-# File: .github/workflows/setup-node.yml
-name: Setup Node.js with pnpm
 on:
-  push:
-    branches:
-      - main  # Ou a branch que você utiliza para deploy
-  pull_request:
-    branches:
-      - main  # Ou as branches que você usa para PRs
+  - push
+  - pull_request
 
 jobs:
-  setup-node:
+  cache-and-install:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Enable Corepack (instala o pnpm)
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js with pnpm
-      - name: Set up Node.js ⚙️
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'  # Cache pnpm
+          node-version: 20
+          cache: 'pnpm'
 
-      # Step 3: Cache pnpm store ⚡
-      - name: Cache pnpm store ⚡
-        id: cache-dependencies
-        uses: actions/cache@v3
-        with:
-          # Caminho correto para o cache do pnpm-store
-          path: ~/.pnpm-store
-          # Corrigindo a chave para procurar o `pnpm-lock.yaml` sem considerar duplicação no caminho
-          key: pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}  # Corrigido para qualquer nível de subdiretório
-          restore-keys: |
-            pnpm-store-
-
-      # Step 4: Install dependencies with pnpm 🔧
-      - name: Install dependencies 🔧
+      - name: Install dependencies
         run: pnpm install
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
