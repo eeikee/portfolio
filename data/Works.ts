@@ -32,17 +32,7 @@ export const works: Work[] = [
   },
   {
     id: 6,
-    children: "Rabobank (Client)",
-    color: "orange",
-  },
-  {
-    id: 7,
-    children: "Rabobank (Client)",
-    color: "orange",
-  },
-  {
-    id: 8,
-    children: "2024/7: Move back from Brazil to Japan",
+    children: "2024/7: Start freelancing",
     color: "red",
   },
 ];

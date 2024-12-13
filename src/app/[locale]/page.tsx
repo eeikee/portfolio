@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import SkillList from 'src/components/skill-list';
 import WorkHistory from 'src/components/work-history';
 import ProjectCardList from '../../components/projects-card-list';
+import ProjectTable from './ProjectTable';
 
 export default function Page() {
   const t = useTranslations('home');
@@ -26,6 +27,7 @@ export default function Page() {
       <SkillList />
       <Divider style={{ borderColor: '#FFFFFF' }} />
       <WorkHistory works={works} />
+      <ProjectTable />
       <Divider style={{ borderColor: '#FFFFFF' }} />
     </section>
   )
