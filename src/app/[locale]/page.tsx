@@ -4,8 +4,7 @@ import { works } from 'data/Works';
 import { useTranslations } from 'next-intl';
 import SkillList from 'src/components/skill-list';
 import WorkHistory from 'src/components/work-history';
-import ProjectCardList from '../../components/projects-card-list';
-import ProjectTable from './ProjectTable';
+import ProjectList from '../../components/project-list';
 
 export default function Page() {
   const t = useTranslations('home');
@@ -22,12 +21,11 @@ export default function Page() {
       <div className="my-8">
       </div>
       <Divider style={{ borderColor: '#FFFFFF' }} />
-      <ProjectCardList projects={projects} />
-      <Divider style={{ borderColor: '#FFFFFF' }} />
       <SkillList />
       <Divider style={{ borderColor: '#FFFFFF' }} />
+      <ProjectList />
+      <Divider style={{ borderColor: '#FFFFFF' }} />
       <WorkHistory works={works} />
-      <ProjectTable />
       <Divider style={{ borderColor: '#FFFFFF' }} />
     </section>
   )
