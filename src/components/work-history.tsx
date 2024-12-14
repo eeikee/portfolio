@@ -26,7 +26,7 @@ export default function WorkHistory({ works }: Props) {
         <Timeline
           style={{ color: "white" }}
           mode={"left"}
-          reverse={true}
+          reverse={false}
           pending="Next..."
           items={works}
         />
