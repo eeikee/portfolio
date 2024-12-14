@@ -28,7 +28,7 @@ const data = [
   },
   {
     title: "Phone",
-    action: "mailto:",
+    action: "tel:",
     content: "+81 (070) 9186-0325",
   },
   {
@@ -42,22 +42,43 @@ export default function Footer() {
   const t = useTranslations("Footer");
   return (
     <footer className="mb-16">
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Contacts</h1>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter text-left">Contacts</h1>
       <List
         grid={{
-          gutter: 16,
+          gutter: 10,
           xs: 1,
           sm: 2,
           md: 4,
           lg: 4,
-          xl: 6,
-          xxl: 3,
+          xl: 5,
+          xxl: 6,
         }}
         dataSource={data}
         renderItem={(item) => (
-          <List.Item>
-            <Card title={item.title}>
-              <a href={item.action + item.content}>{item.content}</a>
+          <List.Item style={{ display: 'inline-block'}}>
+            <Card
+              title={item.title}
+              bodyStyle={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                textAlign: 'left',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}
+              style={{
+                width: 'auto',
+                minWidth: '200px',
+                maxWidth: '300px', 
+                display: 'inline-block',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
+              <a href={item.action + item.content} style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                {item.content}
+              </a>
             </Card>
           </List.Item>
         )}
@@ -91,14 +112,14 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/ekonuma/portfolio"
+            href="https://www.linkedin.com/in/ekonuma/"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">Linkedin</p>
           </a>
         </li>
       </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+      <p className="mt-8 text-neutral-600 dark:text-neutral-300 text-center">
         © {new Date().getFullYear()} MIT Licensed
       </p>
     </footer>
