@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@ant-design/icons':
+        specifier: ^5.6.0
+        version: 5.6.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@ant-design/nextjs-registry':
         specifier: ^1.0.2
         version: 1.0.2(@ant-design/cssinjs@1.23.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(antd@5.23.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(next@14.2.23(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@emailjs/browser':
+        specifier: ^4.4.1
+        version: 4.4.1
       '@notionhq/client':
         specifier: ^2.2.15
         version: 2.2.15
@@ -41,6 +47,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      emailjs-com:
+        specifier: ^3.2.0
+        version: 3.2.0
       geist:
         specifier: 1.2.2
         version: 1.2.2(next@14.2.23(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
@@ -130,6 +139,10 @@ packages:
   '@babel/runtime@7.26.7':
     resolution: {integrity: sha512-AOPI3D+a8dXnja+iwsUqGRjr1BbZIe771sXdapOtYI531gSqpi92vXivKcq2asu/DFpdl1ceFAKZyRzK2PCVcQ==}
     engines: {node: '>=6.9.0'}
+
+  '@emailjs/browser@4.4.1':
+    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+    engines: {node: '>=14.0.0'}
 
   '@emotion/hash@0.8.0':
     resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
@@ -597,6 +610,11 @@ packages:
 
   electron-to-chromium@1.5.88:
     resolution: {integrity: sha512-K3C2qf1o+bGzbilTDCTBhTQcMS9KW60yTAaTeeXsfvQuTDDwlokLam/AdqlqcSy9u4UainDgsHV23ksXAOgamw==}
+
+  emailjs-com@3.2.0:
+    resolution: {integrity: sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==}
+    engines: {node: '>=12.0.0'}
+    deprecated: The SDK name changed to @emailjs/browser
 
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -1493,6 +1511,8 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  '@emailjs/browser@4.4.1': {}
+
   '@emotion/hash@0.8.0': {}
 
   '@emotion/is-prop-valid@1.2.2':
@@ -1948,6 +1968,8 @@ snapshots:
   diff@5.2.0: {}
 
   electron-to-chromium@1.5.88: {}
+
+  emailjs-com@3.2.0: {}
 
   escalade@3.2.0: {}
 

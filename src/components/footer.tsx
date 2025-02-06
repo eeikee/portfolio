@@ -2,6 +2,8 @@
 
 import { Card, Divider, List } from "antd";
 import { useTranslations } from "next-intl";
+import EmailForm from "./email-form";
+import WhatsAppButton from "./whatsapp-btn";
 
 function ArrowIcon() {
   return (
@@ -43,6 +45,9 @@ export default function Footer() {
   return (
     <footer className="mb-16">
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter text-left">Contacts</h1>
+      <div style={{ paddingBottom: "40px" }}>
+        <WhatsAppButton />
+      </div>
       <List
         grid={{
           gutter: 10,
@@ -55,7 +60,7 @@ export default function Footer() {
         }}
         dataSource={data}
         renderItem={(item) => (
-          <List.Item style={{ display: 'inline-block'}}>
+          <List.Item style={{ display: 'inline-block' }}>
             <Card
               title={item.title}
               bodyStyle={{
@@ -70,7 +75,7 @@ export default function Footer() {
               style={{
                 width: 'auto',
                 minWidth: '200px',
-                maxWidth: '300px', 
+                maxWidth: '300px',
                 display: 'inline-block',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -83,6 +88,9 @@ export default function Footer() {
           </List.Item>
         )}
       />
+      {/* <Card>
+        <EmailForm />
+      </Card> */}
       <Divider style={{ borderColor: "#FFFFFF" }} />
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
@@ -93,18 +101,7 @@ export default function Footer() {
             href="https://github.com/ekonuma"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/ekonuma/portfolio"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
+            <p className="ml-2 h-7">Github</p>
           </a>
         </li>
         <li>
@@ -116,6 +113,17 @@ export default function Footer() {
           >
             <ArrowIcon />
             <p className="ml-2 h-7">Linkedin</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/ekonuma/portfolio"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">View source</p>
           </a>
         </li>
       </ul>
