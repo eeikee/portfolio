@@ -35,10 +35,10 @@ const App: React.FC = () => (
             <List.Item.Meta style={{ fontSize: '24px', fontWeight: 'bold' }}
               title={item.name}
             />
-            <div>
-              {item.tecnologies.map(item =>
-                <Tag key={Item.name} color={categories.get(item.type)}>
-                  {item.name}
+            <div key={item.name}>
+              {item.tecnologies.map(techItem =>
+                <Tag key={techItem.name} color={categories.get(techItem.type)}>
+                  {techItem.name}
                 </Tag>
               )}
             </div>

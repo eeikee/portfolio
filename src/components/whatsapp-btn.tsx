@@ -1,6 +1,6 @@
-import { Button, Card } from "antd";
-import { useTranslations } from "next-intl";
 import { WhatsAppOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import { useTranslations } from "next-intl";
 
 const WhatsAppButton = () => {
     const phoneNumber = '8107091860325';
@@ -8,11 +8,9 @@ const WhatsAppButton = () => {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     const t = useTranslations('home');
     return (
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <Button type="primary">
-                {t('send-whatsapp')} <WhatsAppOutlined />
-            </Button>
-        </a>
+        <Button color="green" variant="solid" icon={<WhatsAppOutlined />} href={whatsappLink}>
+            {t('send-whatsapp')}
+        </Button>
     );
 };
 

@@ -2,8 +2,8 @@
 
 import { Card, Divider, List } from "antd";
 import { useTranslations } from "next-intl";
-import EmailForm from "./email-form";
-import WhatsAppButton from "./whatsapp-btn";
+import EmailForm from "../email-form";
+import WhatsAppButton from "../whatsapp-btn";
 
 function ArrowIcon() {
   return (
@@ -45,9 +45,6 @@ export default function Footer() {
   return (
     <footer className="mb-16">
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter text-left">Contacts</h1>
-      <div style={{ paddingBottom: "40px" }}>
-        <WhatsAppButton />
-      </div>
       <List
         grid={{
           gutter: 10,
@@ -61,17 +58,8 @@ export default function Footer() {
         dataSource={data}
         renderItem={(item) => (
           <List.Item style={{ display: 'inline-block' }}>
-            <Card
+            <Card className="footer-card"
               title={item.title}
-              bodyStyle={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                textAlign: 'left',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }}
               style={{
                 width: 'auto',
                 minWidth: '200px',
@@ -88,9 +76,12 @@ export default function Footer() {
           </List.Item>
         )}
       />
-      {/* <Card>
+      <div style={{ paddingBottom: "25px" }}>
+        <WhatsAppButton />
+      </div>
+      {<Card>
         <EmailForm />
-      </Card> */}
+      </Card>}
       <Divider style={{ borderColor: "#FFFFFF" }} />
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>

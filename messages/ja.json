@@ -4,5 +4,13 @@
       "welcome":  " ポートフォリオへようこそ!",
       "introduction": "東京都出身のJavaバックエンドエンジニアです。子供の頃からテクノロジーやガジェットに強い興味を持っており、最新のツールやイノベーションを探求する熱意は今も私の仕事の原動力となっています。現在は、Golang、React、Next.js、Androidアプリ、Kotlin、AWSを勉強し、専門知識を広げています。自分の多様な経歴とスキルを活かして、革新的なソリューションを生み出し、新しいプロジェクトに貢献できることにわくわくしています。",
       "send-whatsapp": "WhatsAppでメッセージを送信"
+    },
+    "Footer": {
+      "a": [{
+        "id": 1,
+        "label": "2020/10 - GFT Intern training camp",
+        "children": "Intern at GFT, Java ecossistem training, TDD, QA, Angular",
+        "color": "white"
+      }]
     }
   }
