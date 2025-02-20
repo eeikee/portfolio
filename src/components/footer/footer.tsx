@@ -31,7 +31,7 @@ const data = [
   {
     title: "Phone",
     action: "tel:",
-    content: "+81 (070) 9186-0325",
+    content: "(+81)070-9186-0325",
   },
   {
     title: "Linkedin",
@@ -79,7 +79,11 @@ export default function Footer() {
       <div style={{ paddingBottom: "25px" }}>
         <WhatsAppButton />
       </div>
-      {<Card>
+      {<Card style={{
+                width: 'auto',
+                minWidth: '200px',
+                maxWidth: '800px',
+              }}>
         <EmailForm />
       </Card>}
       <Divider style={{ borderColor: "#FFFFFF" }} />

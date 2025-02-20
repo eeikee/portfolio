@@ -2,7 +2,7 @@
     "home": {
       "greeting": "Prazer, eu sou o Eike.",
       "welcome": "Bem vindo ao meu portfólio!",
-      "introduction": "Sou um Analista desevolvedor backend Java, nascido em 2001 em Tóquio com 4 anos de experiência profissional. Desde minha infância tenho um grande interesse por tecnologia e gadgets, e esse entusiasmo em explorar as ferramentas e inovações continua a impulsionar meu trabalho. Atualmente, estou expandindo minha experiência estudando Golang, React, Next.js, aplicativos nativos do Android, Kotlin e AWS. Estou animado para aproveitar minha bagagem de conhecimento diverso para criar soluções inovadoras e contribuir com novos projetos.",
+      "introduction": "Sou um Analista desevolvedor backend Java, nascido em 2001 em Tóquio com 4 anos de experiência profissional. Desde minha infância tenho um grande interesse por tecnologia e gadgets, e esse entusiasmo em explorar as ferramentas e inovações continua a impulsionar meu trabalho. Atualmente, estou expandindo minha experiência estudando sobre arquitetura, AWS, Golang. Além disso me desafio com outras tecnologias como React, Next.js, aplicativos nativos do Android. Estou animado para aproveitar minha bagagem de conhecimento diverso para criar soluções inovadoras e contribuir com novos projetos.",
       "send-whatsapp": "Enviar mensagem no WhatsApp"
     },
     "Footer": {

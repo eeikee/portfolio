@@ -1,10 +1,22 @@
-import React from 'react';
-import { Form, Input, Button, message, Divider } from 'antd';
+import { Button, Col, Form, Input, message, Row } from 'antd';
 
 const EmailForm = () => {
   const [form] = Form.useForm();
 
-  const onFinish = async (values) => {
+  interface FormValues {
+    name: string;
+    email: string;
+    phone?: string;
+    subject: string;
+    message: string;
+  }
+
+  interface ApiResponse {
+    message: string;
+    error?: string;
+  }
+
+  const onFinish = async (values: FormValues) => {
     try {
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
@@ -14,7 +26,7 @@ const EmailForm = () => {
         body: JSON.stringify(values),
       });
 
-      const data = await response.json();
+      const data: ApiResponse = await response.json();
       if (response.ok) {
         message.success(data.message);
         form.resetFields();
@@ -22,7 +34,7 @@ const EmailForm = () => {
         console.error('Erro ao enviar e-mail:', data.error);
         message.error(data.error);
       }
-    } catch (error) {
+    } catch (error: any) {
       message.error('Erro ao enviar e-mail. Tente novamente.');
       console.error('Erro ao enviar e-mail:', error.message);
       return new Response(JSON.stringify({ error: `Erro ao enviar e-mail: ${error.message}` }));
@@ -30,8 +42,7 @@ const EmailForm = () => {
   };
   return (
     <>
-      <h1>Email</h1>
-      <Divider />
+
       <Form form={form} name="email_form" onFinish={onFinish} layout="vertical">
         <Form.Item
           name="name"
@@ -41,25 +52,30 @@ const EmailForm = () => {
           <Input />
         </Form.Item>
 
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[{ required: true, message: 'Por favor, insira seu nome!' }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          name="phone"
-          label="Telefone"
-          rules={[{ required: false }]}
-        >
-          <Input />
-        </Form.Item>
+        <Row gutter={16}>
+          <Col span={12}>
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[{ required: true, message: 'Por favor, insira seu nome!' }]}
+            >
+              <Input />
+            </Form.Item>
+          </Col>
+          <Col span={12}>
+            <Form.Item
+              name="phone"
+              label="Phone"
+              rules={[{ required: false }]}
+            >
+              <Input />
+            </Form.Item>
+          </Col>
+        </Row>
 
         <Form.Item
           name="subject"
-          label="Assunto"
+          label="Subject"
           rules={[{ required: true, message: 'Por favor, insira o assunto!' }]}
         >
           <Input />
@@ -67,7 +83,7 @@ const EmailForm = () => {
 
         <Form.Item
           name="message"
-          label="Mensagem"
+          label="Message"
           rules={[{ required: true, message: 'Por favor, insira sua mensagem!' }]}
         >
           <Input.TextArea rows={4} />
@@ -75,7 +91,7 @@ const EmailForm = () => {
 
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            Enviar
+            Send
           </Button>
         </Form.Item>
       </Form>

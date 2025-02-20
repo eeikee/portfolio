@@ -8,7 +8,7 @@ export const skills = {
   Java: { name: "Java", type: "backend" },
   Spring: { name: "Spring", type: "backend" },
   Golang: { name: "Golang", type: "backend" },
-  Javascript: { name: "Javascript", type: "backend" },
+  Javascript: { name: "Javascript", type: "frontend" },
   Typescript: { name: "Typescript", type: "frontend" },
   React: { name: "React", type: "frontend" },
   NextJS: { name: "NextJS", type: "frontend" },
@@ -44,7 +44,7 @@ export function getCategories(): Map<string, string> {
 
 export default function SkillList() {
   
-  const skills: Skill[] = [{ name: "Java", type: "backend" }, { name: "Spring", type: "backend" }, { name: "Golang", type: "backend" }, { name: "Javascript", type: "backend" }, { name: "Typescript", type: "frontend" }, { name: "React", type: "frontend" }, { name: "Next JS", type: "frontend" }, { name: "Azure", type: "cloud" }, { name: "AWS", type: "cloud" }, { name: "Azure DevOps", type: "service" }, { name: "Github", type: "service" }, { name: "Gitlab", type: "service" }, { name: "Docker", type: "infra" }, { name: "Kubernetes", type: "infra" }, { name: "Linux", type: "infra" }, { name: "Shell", type: "infra" }, { name: "Android", type: "mobile" }, { name: "Kotlin", type: "mobile" }];
+  const skills: Skill[] = [{ name: "Java", type: "backend" }, { name: "Spring", type: "backend" }, { name: "Golang", type: "backend" }, { name: "Javascript", type: "frontend" }, { name: "Typescript", type: "frontend" }, { name: "React", type: "frontend" }, { name: "Next JS", type: "frontend" }, { name: "Azure", type: "cloud" }, { name: "AWS", type: "cloud" }, { name: "Azure DevOps", type: "service" }, { name: "Github", type: "service" }, { name: "Gitlab", type: "service" }, { name: "Docker", type: "infra" }, { name: "Kubernetes", type: "infra" }, { name: "Linux", type: "infra" }, { name: "Shell", type: "infra" }, { name: "Android", type: "mobile" }, { name: "Kotlin", type: "mobile" }];
   
   const groupBy = (array, keyGetter) => {
     const map = new Map();

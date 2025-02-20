@@ -27,7 +27,7 @@ export default function WorkHistory({ works }: Props) {
           style={{ color: "white" }}
           mode={"left"}
           reverse={false}
-          pending="Next..."
+          pending="Coming next..."
           items={works}
         />
       </div>
